@@ -1,0 +1,40 @@
+/**
+These bindings makes MacOS behave like Linux and Windows
+
+Create a directory named ~/Library/KeyBindings
+Then create a file named DefaultKeyBinding.dict 
+and paste these inside it
+ */
+
+{
+  "^\UF702" = moveWordLeft:;
+  "^\UF703" = moveWordRight:;
+  "^$\UF702" = moveWordLeftAndModifySelection:;
+  "^$\UF703" = moveWordRightAndModifySelection:;
+
+  /* Remap Home / End keys */
+  /* Home Button*/
+  "\UF729" = "moveToBeginningOfLine:";
+
+  /* End Button */
+  "\UF72B" = "moveToEndOfLine:";
+
+  /* Shift + Home Button */
+  "$\UF729" = "moveToBeginningOfLineAndModifySelection:";
+
+  /* Shift + End Button */
+  "$\UF72B" = "moveToEndOfLineAndModifySelection:";
+
+  /* Ctrl + Home Button */
+  "^\UF729" = "moveToBeginningOfDocument:";
+
+  /* Ctrl + End Button */
+  "^\UF72B" = "moveToEndOfDocument:";
+
+  /* Shift + Ctrl + Home Button */
+  "$^\UF729" = "moveToBeginningOfDocumentAndModifySelection:";
+
+  /* Shift + Ctrl + End Button*/
+  "$^\UF72B" = "moveToEndOfDocumentAndModifySelection:";
+
+}
